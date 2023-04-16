@@ -11,7 +11,18 @@
 		406563D429EBBE4200A0002C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406563D329EBBE4200A0002C /* ContentView.swift */; };
 		406563D629EBBE4400A0002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406563D529EBBE4400A0002C /* Assets.xcassets */; };
 		406563D929EBBE4400A0002C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406563D829EBBE4400A0002C /* Preview Assets.xcassets */; };
+		406563E629EBBE7300A0002C /* TDD3_BarleyBreakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406563E529EBBE7300A0002C /* TDD3_BarleyBreakTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		406563E729EBBE7300A0002C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 406563C629EBBE4200A0002C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 406563CD29EBBE4200A0002C;
+			remoteInfo = TDD3_BarleyBreak;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		406563CE29EBBE4200A0002C /* TDD3_BarleyBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDD3_BarleyBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		406563D329EBBE4200A0002C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		406563D529EBBE4400A0002C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		406563D829EBBE4400A0002C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		406563E329EBBE7300A0002C /* TDD3_BarleyBreakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDD3_BarleyBreakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		406563E529EBBE7300A0002C /* TDD3_BarleyBreakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD3_BarleyBreakTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		406563CB29EBBE4200A0002C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406563E029EBBE7300A0002C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				406563D029EBBE4200A0002C /* TDD3_BarleyBreak */,
+				406563E429EBBE7300A0002C /* TDD3_BarleyBreakTests */,
 				406563CF29EBBE4200A0002C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				406563CE29EBBE4200A0002C /* TDD3_BarleyBreak.app */,
+				406563E329EBBE7300A0002C /* TDD3_BarleyBreakTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		406563E429EBBE7300A0002C /* TDD3_BarleyBreakTests */ = {
+			isa = PBXGroup;
+			children = (
+				406563E529EBBE7300A0002C /* TDD3_BarleyBreakTests.swift */,
+			);
+			path = TDD3_BarleyBreakTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = 406563CE29EBBE4200A0002C /* TDD3_BarleyBreak.app */;
 			productType = "com.apple.product-type.application";
 		};
+		406563E229EBBE7300A0002C /* TDD3_BarleyBreakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 406563E929EBBE7300A0002C /* Build configuration list for PBXNativeTarget "TDD3_BarleyBreakTests" */;
+			buildPhases = (
+				406563DF29EBBE7300A0002C /* Sources */,
+				406563E029EBBE7300A0002C /* Frameworks */,
+				406563E129EBBE7300A0002C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				406563E829EBBE7300A0002C /* PBXTargetDependency */,
+			);
+			name = TDD3_BarleyBreakTests;
+			productName = TDD3_BarleyBreakTests;
+			productReference = 406563E329EBBE7300A0002C /* TDD3_BarleyBreakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					406563CD29EBBE4200A0002C = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					406563E229EBBE7300A0002C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 406563CD29EBBE4200A0002C;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				406563CD29EBBE4200A0002C /* TDD3_BarleyBreak */,
+				406563E229EBBE7300A0002C /* TDD3_BarleyBreakTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				406563D929EBBE4400A0002C /* Preview Assets.xcassets in Resources */,
 				406563D629EBBE4400A0002C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		406563E129EBBE7300A0002C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		406563DF29EBBE7300A0002C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				406563E629EBBE7300A0002C /* TDD3_BarleyBreakTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		406563E829EBBE7300A0002C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 406563CD29EBBE4200A0002C /* TDD3_BarleyBreak */;
+			targetProxy = 406563E729EBBE7300A0002C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		406563DA29EBBE4400A0002C /* Debug */ = {
@@ -317,6 +393,42 @@
 			};
 			name = Release;
 		};
+		406563EA29EBBE7300A0002C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q725XC84L2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ex3cute.TDD3-BarleyBreakTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD3_BarleyBreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TDD3_BarleyBreak";
+			};
+			name = Debug;
+		};
+		406563EB29EBBE7300A0002C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q725XC84L2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ex3cute.TDD3-BarleyBreakTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TDD3_BarleyBreak.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TDD3_BarleyBreak";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -334,6 +446,15 @@
 			buildConfigurations = (
 				406563DD29EBBE4400A0002C /* Debug */,
 				406563DE29EBBE4400A0002C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		406563E929EBBE7300A0002C /* Build configuration list for PBXNativeTarget "TDD3_BarleyBreakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				406563EA29EBBE7300A0002C /* Debug */,
+				406563EB29EBBE7300A0002C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
