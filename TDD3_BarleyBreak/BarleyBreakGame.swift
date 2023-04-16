@@ -7,10 +7,10 @@
 
 import Foundation
 
-class BarleyBreakGame {
-    internal var items: [Int] = []
+class BarleyBreakGame: ObservableObject {
+    @Published internal var items: [Int] = []
+    @Published internal var counter = 0
     internal let n: Int = 4
-    internal var counter = 0
     
     var emptyItem: Int {
         n * n
@@ -77,5 +77,19 @@ class BarleyBreakGame {
             }
         }
         return sum.isMultiple(of: 2)
+    }
+    
+    func createNewGame() {
+        counter = 0
+        
+        repeat {
+            items.removeAll()
+            
+            for i in 1...n*n {
+                items.append(i)
+            }
+            
+            items.shuffle()
+        } while !isSolvedGame()
     }
 }
