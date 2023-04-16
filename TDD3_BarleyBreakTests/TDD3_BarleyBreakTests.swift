@@ -49,4 +49,18 @@ final class TDD3_BarleyBreakTests: XCTestCase {
 
         XCTAssertEqual(result, estimated)
     }
+    
+    func testLoadingGameWithNonUniqueOrderAndWrongAlphabet() {
+        guard let game else { return }
+        
+        let items = [1, 1, 1, 1,
+                     2, 2, 2, 2,
+                     3, 3, 3, 3,
+                     4, 4, 4, 4]
+        
+        let result = game.loadGame(items: items)
+        let estimated = false
+
+        XCTAssertEqual(result, estimated)
+    }
 }
