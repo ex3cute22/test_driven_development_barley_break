@@ -35,4 +35,18 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         
         XCTAssertEqual(result, estimated)
     }
+    
+    //тест на загрузку поля с порядком отличным у самой игры
+    func testLoadingGameWithNotEqualsN() {
+        guard let game else { return }
+        
+        let items = [1, 2, 3,
+                     4, 5, 6,
+                     7, 8, 9]
+        
+        let result = game.loadGame(items: items)
+        let estimated = false
+
+        XCTAssertEqual(result, estimated)
+    }
 }
