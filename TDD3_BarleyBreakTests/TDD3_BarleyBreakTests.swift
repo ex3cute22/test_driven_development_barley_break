@@ -50,6 +50,7 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         XCTAssertEqual(result, estimated)
     }
     
+    //тест на загрузку поля с не уникальными элементами
     func testLoadingGameWithNonUniqueOrderAndWrongAlphabet() {
         guard let game else { return }
         
@@ -61,6 +62,23 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         let result = game.loadGame(items: items)
         let estimated = false
 
+        XCTAssertEqual(result, estimated)
+    }
+    
+    //тест на передвижение пустой клетки при выборе ближайшего элемента
+    func testShouldMoveItem() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            10, 9, 13, 11,
+            14, 6, 5, 8,
+            16, 7, 12, 15
+        ]
+        
+        let result = game.moveItem(value: 14)
+        let estimated = true
+        
         XCTAssertEqual(result, estimated)
     }
 }

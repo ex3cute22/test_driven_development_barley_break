@@ -12,6 +12,10 @@ class BarleyBreakGame {
     internal let n: Int = 4
     internal var counter = 0
     
+    var emptyItem: Int {
+        n * n
+    }
+    
     func loadGame(items: [Int]) -> Bool {
         guard items.count == n*n else { return false }
         
@@ -25,5 +29,9 @@ class BarleyBreakGame {
         
         self.items = items
         return true
+    }
+    
+    func moveItem(value: Int) -> Bool {
+        return false
     }
 }
