@@ -16,6 +16,7 @@ class BarleyBreakGame {
         n * n
     }
     
+    @discardableResult
     func loadGame(items: [Int]) -> Bool {
         guard items.count == n*n else { return false }
         
@@ -32,6 +33,20 @@ class BarleyBreakGame {
     }
     
     func moveItem(value: Int) -> Bool {
-        return false
+        guard let index = items.firstIndex(where: {$0 == value}),
+              let indexTail = items.firstIndex(where: {$0 == n*n}) else { return false }
+        
+        let dif = abs(index-indexTail)
+        let isVerticalMatch = dif / n == 1 && dif.isMultiple(of: n)
+        let isHorizontalMatch = dif == 1 && index / n == indexTail / n
+        
+        if isVerticalMatch || isHorizontalMatch {
+            items.swapAt(index, indexTail)
+            counter += 1
+            return true
+        }
+        else {
+            return false
+        }
     }
 }

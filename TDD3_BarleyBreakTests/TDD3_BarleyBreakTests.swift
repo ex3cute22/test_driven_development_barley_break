@@ -76,6 +76,8 @@ final class TDD3_BarleyBreakTests: XCTestCase {
             16, 7, 12, 15
         ]
         
+        game.loadGame(items: items)
+        
         let result = game.moveItem(value: 14)
         let estimated = true
         
@@ -93,6 +95,8 @@ final class TDD3_BarleyBreakTests: XCTestCase {
             16, 7, 12, 15
         ]
         
+        game.loadGame(items: items)
+        
         let result = game.moveItem(value: 6)
         let estimated = false
         
@@ -109,6 +113,8 @@ final class TDD3_BarleyBreakTests: XCTestCase {
             14, 6, 5, 8,
             16, 7, 12, 15
         ]
+        
+        game.loadGame(items: items)
         
         let result = game.moveItem(value: 4)
         let estimated = false
