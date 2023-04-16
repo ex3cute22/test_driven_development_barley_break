@@ -60,4 +60,8 @@ class BarleyBreakGame {
         
         return true
     }
+    
+    func isSolvedGame() -> Bool {
+        return false
+    }
 }
