@@ -66,7 +66,7 @@ final class TDD3_BarleyBreakTests: XCTestCase {
     }
     
     //тест на передвижение пустой клетки при выборе ближайшего элемента
-    func testShouldMoveItem() {
+    func testShouldMoveItemWhenItemNearby() {
         guard let game else { return }
         
         let items = [
@@ -78,6 +78,23 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         
         let result = game.moveItem(value: 14)
         let estimated = true
+        
+        XCTAssertEqual(result, estimated)
+    }
+    
+    //тест когда выбранный элемент находится рядом (1 клетка), но по диагонали
+    func testNotShouldMoveItemWhenItemOnDiagonal() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            10, 9, 13, 11,
+            14, 6, 5, 8,
+            16, 7, 12, 15
+        ]
+        
+        let result = game.moveItem(value: 6)
+        let estimated = false
         
         XCTAssertEqual(result, estimated)
     }
