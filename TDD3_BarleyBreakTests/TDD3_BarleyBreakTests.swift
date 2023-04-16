@@ -98,4 +98,21 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         
         XCTAssertEqual(result, estimated)
     }
+    
+    //тест когда выбранный элемент находится дальше 1 клетки
+    func testNotShouldMoveItemWhenItemOnFar() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            10, 9, 13, 11,
+            14, 6, 5, 8,
+            16, 7, 12, 15
+        ]
+        
+        let result = game.moveItem(value: 4)
+        let estimated = false
+        
+        XCTAssertEqual(result, estimated)
+    }
 }
