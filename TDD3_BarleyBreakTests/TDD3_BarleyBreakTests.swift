@@ -6,30 +6,33 @@
 //
 
 import XCTest
+@testable import TDD3_BarleyBreak
 
 final class TDD3_BarleyBreakTests: XCTestCase {
-
+    var game: BarleyBreakGame?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        game = BarleyBreakGame()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        game = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    //тест на загрузку игру
+    func testShouldLoadingGame() {
+        guard let game else { return }
+        
+        let items = [1, 2, 3, 4,
+                     5, 6, 7, 8,
+                     9, 10, 11, 12,
+                     13, 14, 15, 16]
+        
+        
+        
+        let result = game.loadGame(items: items)
+        let estimated = true
+        
+        XCTAssertEqual(result, estimated)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
