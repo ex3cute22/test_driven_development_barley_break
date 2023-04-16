@@ -147,14 +147,13 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         guard let game else { return }
         
         let items = [
-            16, 16, 14, 13,
+            16, 15, 14, 13,
             12, 11, 10, 9,
             8, 7, 6, 5,
             4, 3, 2, 1
         ]
         
         game.loadGame(items: items)
-        
         
         let result = game.isSolvedGame()
         let estimated = true

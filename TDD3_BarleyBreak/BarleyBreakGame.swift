@@ -62,6 +62,19 @@ class BarleyBreakGame {
     }
     
     func isSolvedGame() -> Bool {
-        return false
+        var sum = 0
+        for i in 0..<n*n {
+            let currentItem = items[i]
+            if currentItem != n*n {
+                for j in i..<n*n {
+                    if items[j] < currentItem {
+                        sum += 1
+                    }
+                }
+            } else {
+                sum += i / 4 + 1
+            }
+        }
+        return sum.isMultiple(of: 2)
     }
 }
