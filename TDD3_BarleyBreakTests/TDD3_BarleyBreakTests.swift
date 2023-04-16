@@ -179,4 +179,67 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         
         XCTAssertEqual(result, estimated)
     }
+    
+    func testChangeCounter() {
+        guard let game else { return }
+        
+        let items = [
+            16, 15, 14, 13,
+            12, 11, 10, 9,
+            8, 7, 6, 5,
+            4, 3, 2, 1
+        ]
+        
+        game.loadGame(items: items)
+        
+        game.moveItem(value: 15)
+        game.moveItem(value: 14)
+        game.moveItem(value: 15)
+        game.moveItem(value: 1)
+        
+        let result = game.counter
+        let estimated = 2
+        
+        XCTAssertEqual(result, estimated)
+    }
+    
+    func testAfterWinNotClearCounter() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            5, 6, 7, 8,
+            9, 10, 11, 12,
+            13, 14, 16, 15
+        ]
+        
+        game.loadGame(items: items)
+        
+        game.moveItem(value: 15)
+        let _ = game.checkFoVictory()
+        
+        let result = game.counter
+        let estimated = 1
+        
+        XCTAssertEqual(result, estimated)
+    }
+    
+    func testMoveSelfItem() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            5, 6, 7, 8,
+            9, 10, 11, 12,
+            13, 14, 16, 15
+        ]
+        
+        game.loadGame(items: items)
+        game.moveItem(value: 16)
+        
+        let result = game.items
+        let estimated = items
+        
+        XCTAssertEqual(result, estimated)
+    }
 }

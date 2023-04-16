@@ -28,6 +28,7 @@ class BarleyBreakGame {
             }
         }
         
+        self.counter = 0
         self.items = items
         return true
     }
