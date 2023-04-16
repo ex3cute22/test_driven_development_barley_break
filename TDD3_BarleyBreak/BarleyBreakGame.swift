@@ -32,6 +32,7 @@ class BarleyBreakGame {
         return true
     }
     
+    @discardableResult
     func moveItem(value: Int) -> Bool {
         guard let index = items.firstIndex(where: {$0 == value}),
               let indexTail = items.firstIndex(where: {$0 == n*n}) else { return false }
@@ -48,5 +49,9 @@ class BarleyBreakGame {
         else {
             return false
         }
+    }
+    
+    func checkFoVictory() -> Bool {
+        return false
     }
 }

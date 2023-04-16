@@ -121,4 +121,24 @@ final class TDD3_BarleyBreakTests: XCTestCase {
         
         XCTAssertEqual(result, estimated)
     }
+   
+    //проверка на обнаружение выигрышной комбинации
+    func testCheckVictoryCombination() {
+        guard let game else { return }
+        
+        let items = [
+            1, 2, 3, 4,
+            5, 6, 7, 8,
+            9, 10, 11, 12,
+            13, 14, 16, 15
+        ]
+        
+        game.loadGame(items: items)
+        game.moveItem(value: 15)
+        
+        let result = game.checkFoVictory()
+        let estimated = true
+        
+        XCTAssertEqual(result, estimated)
+    }
 }
