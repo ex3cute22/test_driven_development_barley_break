@@ -52,6 +52,12 @@ class BarleyBreakGame {
     }
     
     func checkFoVictory() -> Bool {
-        return false
+        for (i,elem) in items.enumerated() {
+            if i+1 != elem {
+                return false
+            }
+        }
+        
+        return true
     }
 }
