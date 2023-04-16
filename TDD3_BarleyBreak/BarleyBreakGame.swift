@@ -11,8 +11,19 @@ class BarleyBreakGame {
     internal var items: [Int] = []
     internal let n: Int = 4
     internal var counter = 0
-
+    
     func loadGame(items: [Int]) -> Bool {
-        return false
+        guard items.count == n*n else { return false }
+        
+        let alphabet = (1...n*n).map{Int($0)}
+        
+        for num in alphabet {
+            if !items.contains(num) {
+                return false
+            }
+        }
+        
+        self.items = items
+        return true
     }
 }
